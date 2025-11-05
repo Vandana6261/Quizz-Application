@@ -93,6 +93,24 @@ function showQuestion(i) {
         displayScore(score);
       });
 
+      // let button = document.createElement('button')
+      // button.textContent = "Go to Home Page"
+      // scoreContainer.appendChild(button)
+      // button.addEventListener("click", () => {
+      //   scoreContainer.style.display = "none"
+      //   button.style.width = "fit-content"
+      //   button.style.padding = "10px 20px";
+      //   button.style.borderRadius = "10px"
+
+      //   formContainer.style.display = "flex"
+      // })
+
+      let button = document.querySelector("#goHome")
+      button.addEventListener("click", () => {
+        scoreContainer.style.display = "none"
+        formContainer.style.display = "flex"
+      })
+
     return score;
   }
   let h2 = document.querySelector("h2");
@@ -141,7 +159,7 @@ function showQuestion(i) {
 let isUserPresent = (name, email) => {
   // if(userDataArray.length == 0) return false
   let present = userDataArray.some((eachSt) => {
-    if (eachSt.name === name && eachSt.email === email) return true;
+    if (eachSt.email === email) return true;
   });
   return present;
 };
@@ -183,7 +201,7 @@ form.addEventListener("submit", function (e) {
 
     let studentScore = 0;
     if (questionContainer.style.display == "flex") {
-      studentScore = showQuestion(0);
+      studentScore = showQuestion(9);
       console.log(studentScore);
     }
 

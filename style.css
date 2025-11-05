@@ -109,21 +109,24 @@ h2 {
 
 #scoreContainer {
     display: none;
-}
-
-#scoreDiv {
-    font-size: 30px;
-}
-
-
-#scoreContainer {
     background-image: url("https://media.istockphoto.com/id/1328693155/vector/bright-stadium-arena-lights-vector-design.jpg?s=612x612&w=0&k=20&c=oNtXorOpLDhFwTXYFgTH5j0ibI_AeNUqYkYhtF0TZnA=");
     background-position: center;
     background-size: cover;
+    
+    /* flex-direction: column; */
+    margin: auto;
     justify-content: center;
 }
 #scoreDiv {
     font-size: 50px;
+}
+
+#goHome {
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
 }
 
 
