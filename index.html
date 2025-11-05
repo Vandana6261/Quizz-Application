@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="formContainer">
+      <div class="main">
+        <h1>Computer Basic Test</h1>
+
+        <div class="formDiv">
+          <form action="#">
+            <input type="email" placeholder="Email" id="email" /> <br />
+            <input type="name" placeholder="Name" id="name" required /> <br />
+            <input type="text" placeholder="college" id="clgName" /> <br />
+            <input type="text" placeholder="Semester" id="semester" /> <br />
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="questionContainer">
+      <div class="quiz">
+        <h2>Quetion 1</h2>
+        <div class="questionDiv">
+          <label id="queNo">Question: </label> <br />
+          <div class="optionsDiv">
+            
+            <div>
+              <input
+                type="radio"
+                name="question"
+                id="question1"
+                value="option-1"
+                class="radioInp"
+              />
+              <label for="question1" class="radioLabel">Option 1</label>
+            </div>
+  
+            <div>
+              <input
+                type="radio"
+                name="question"
+                id="question2"
+                value="option-2"
+                class="radioInp"
+              />
+              <label for="question2" class="radioLabel">Option 1</label>
+            </div>
+            
+            <div>
+              <input
+                type="radio"
+                name="question"
+                id="question3"
+                value="option-3"
+                class="radioInp"
+              />
+              <label for="question3" class="radioLabel">Option 1</label>
+            </div>
+  
+            <div>
+              <input
+                type="radio"
+                name="question"
+                id="question4"
+                value="option-4"
+                class="radioInp"
+              />
+              <label for="question4" class="radioLabel">Option 1</label>
+            </div>
+
+          </div>
+        </div>
+        <button id="nextQue">Next Question</button>
+      </div>
+    </div>
+
+    <div class="container" id="scoreContainer">
+      <p id="scoreDiv"></p>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>

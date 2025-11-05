@@ -1,0 +1,131 @@
+*{
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#formContainer {
+    background-image: url("https://media.istockphoto.com/id/1339908748/vector/new-realistic-neon-sign-of-quiz-frame-logo-for-decoration-and-covering-on-the-dark-wall.jpg?s=612x612&w=0&k=20&c=Qn97UPTD2E-MXDC9khiDW9vQglFtjNCFvCtF0EkiDP8=");
+    background-size: cover;
+    background-position: center;
+    padding-left: 30vw;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.formDiv {
+    background-color: rgba(69, 99, 117, 0.425);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+
+}
+.formDiv  input {
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+.formDiv input::placeholder {
+    color: white;
+    opacity: 0.4;
+}
+#semester{
+    margin-bottom: 20px;
+}
+button {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 60px;
+}
+
+
+#questionContainer {
+    display: none;
+    background-image: url("https://media.istockphoto.com/id/1339908748/vector/new-realistic-neon-sign-of-quiz-frame-logo-for-decoration-and-covering-on-the-dark-wall.jpg?s=612x612&w=0&k=20&c=Qn97UPTD2E-MXDC9khiDW9vQglFtjNCFvCtF0EkiDP8=");
+    background-size: cover;
+    background-position: center;
+    /* display: flex; */
+}
+
+.quiz {
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 100px 20px;
+    width: 60%;
+
+}
+h2 {
+    font-size: 40px;
+    margin: 0px 0px 50px 0px ;
+}
+.questionDiv {
+    background-color: rgba(81, 84, 109, 0.603);
+    border-radius: 10px;
+    margin: 30px 0px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.questionDiv label{
+    display: inline-block;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+.optionsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#nextQue {
+    color: white;
+    font-size: 20px;
+    width: fit-content;
+    background-color: rgba(81, 84, 109, 0.603);
+    border-radius: 10px;
+    padding: 10px 30px;
+    transition: all 0.6;
+}
+#nextQue:hover {
+    background-color: rgba(53, 55, 71, 0.603);
+    scale: 1.05;
+}
+
+
+#scoreContainer {
+    display: none;
+}
+
+#scoreDiv {
+    font-size: 30px;
+}
+
+
+#scoreContainer {
+    background-image: url("https://media.istockphoto.com/id/1328693155/vector/bright-stadium-arena-lights-vector-design.jpg?s=612x612&w=0&k=20&c=oNtXorOpLDhFwTXYFgTH5j0ibI_AeNUqYkYhtF0TZnA=");
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+}
+#scoreDiv {
+    font-size: 50px;
+}
+
+
+
+
