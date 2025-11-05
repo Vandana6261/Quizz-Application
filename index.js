@@ -141,7 +141,7 @@ function showQuestion(i) {
 let isUserPresent = (name, email) => {
   // if(userDataArray.length == 0) return false
   let present = userDataArray.some((eachSt) => {
-    if (eachSt.name === name && eachSt.email === email) return true;
+    if (eachSt.email === email) return true;
   });
   return present;
 };
