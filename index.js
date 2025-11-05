@@ -201,7 +201,7 @@ form.addEventListener("submit", function (e) {
 
     let studentScore = 0;
     if (questionContainer.style.display == "flex") {
-      studentScore = showQuestion(9);
+      studentScore = showQuestion(0);
       console.log(studentScore);
     }
 
