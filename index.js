@@ -63,6 +63,7 @@ let h2 = document.querySelector("h2");
 let radioLabel = document.querySelectorAll(".radioLabel");
 let radionInput = document.querySelectorAll(".radioInp");
 
+
 let userDataArray = [];
 
 window.addEventListener("load", () => {
@@ -138,6 +139,7 @@ function showQuestion(i) {
 }
 
 let isUserPresent = (name, email) => {
+  // if(userDataArray.length == 0) return false
   let present = userDataArray.some((eachSt) => {
     if (eachSt.name === name && eachSt.email === email) return true;
   });
@@ -167,7 +169,11 @@ form.addEventListener("submit", function (e) {
     email: emailVal,
   };
 
-  isUserExists = isUserPresent(nameVal, emailVal);
+  if(userDataArray.length == 0) {
+    isUserExists = false
+  } else {
+    isUserExists = isUserPresent(nameVal, emailVal);
+  }
 
   if (!isUserExists) {
     userDataArray.push(user);
@@ -177,10 +183,9 @@ form.addEventListener("submit", function (e) {
 
     let studentScore = 0;
     if (questionContainer.style.display == "flex") {
-      studentScore = showQuestion(8);
+      studentScore = showQuestion(0);
       console.log(studentScore);
     }
-
 
   } else {
     alert("You are already done your test");
