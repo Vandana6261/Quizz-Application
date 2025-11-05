@@ -93,22 +93,9 @@ function showQuestion(i) {
         displayScore(score);
       });
 
-      // let button = document.createElement('button')
-      // button.textContent = "Go to Home Page"
-      // scoreContainer.appendChild(button)
-      // button.addEventListener("click", () => {
-      //   scoreContainer.style.display = "none"
-      //   button.style.width = "fit-content"
-      //   button.style.padding = "10px 20px";
-      //   button.style.borderRadius = "10px"
-
-      //   formContainer.style.display = "flex"
-      // })
-
       let button = document.querySelector("#goHome")
       button.addEventListener("click", () => {
-        scoreContainer.style.display = "none"
-        formContainer.style.display = "flex"
+        window.location.reload()
       })
 
     return score;
