@@ -51,7 +51,6 @@ const quizData = [
   },
 ];
 
-
 let form = document.querySelector("form");
 console.log(form);
 let button = document.querySelector("button");
@@ -62,7 +61,6 @@ let scoreContainer = document.querySelector("#scoreContainer");
 let h2 = document.querySelector("h2");
 let radioLabel = document.querySelectorAll(".radioLabel");
 let radionInput = document.querySelectorAll(".radioInp");
-
 
 let userDataArray = [];
 
@@ -80,23 +78,27 @@ function showQuestion(i) {
     console.log(score);
     nextQue.textContent = "Submit Quiz";
     nextQue.classList.add("submitQuiz");
-    nextQue.style.backgroundColor = "aqua"
-    nextQue.style.fontSize = "23px"
-    nextQue.style.color = "black"
-    
-      console.log("submit btn is clicked");
-      let btn = document.querySelector("#nextQue");
-      btn.addEventListener("click", () => {
-        console.log("submit clicked");
-        questionContainer.style.display = "none";
-        scoreContainer.style.display = "flex";
-        displayScore(score);
-      });
+    nextQue.style.backgroundColor = "aqua";
+    nextQue.style.fontSize = "23px";
+    nextQue.style.color = "black";
 
-      let button = document.querySelector("#goHome")
-      button.addEventListener("click", () => {
-        window.location.reload()
-      })
+    console.log("submit btn is clicked");
+    let btn = document.querySelector("#nextQue");
+    btn.addEventListener("click", () => {
+      console.log("submit clicked");
+      questionContainer.style.display = "none";
+      scoreContainer.style.display = "flex";
+      displayScore(score);
+    });
+
+    let button = document.querySelector("#goHome");
+    button.addEventListener("click", () => {
+      window.location.reload();
+    });
+
+
+    userDataArray[userDataArray.length-1].score = score;
+    localStorage.setItem("User", JSON.stringify(userDataArray));
 
     return score;
   }
@@ -172,10 +174,11 @@ form.addEventListener("submit", function (e) {
   let user = {
     name: nameVal,
     email: emailVal,
+    score: 0,
   };
 
-  if(userDataArray.length == 0) {
-    isUserExists = false
+  if (userDataArray.length == 0) {
+    isUserExists = false;
   } else {
     isUserExists = isUserPresent(nameVal, emailVal);
   }
@@ -191,15 +194,17 @@ form.addEventListener("submit", function (e) {
       studentScore = showQuestion(0);
       console.log(studentScore);
     }
-
   } else {
     alert("You are already done your test");
+    userDataArray.forEach((item) => {
+      if (item.email === emailVal) {
+        alert(`Your score is ${item.score} out of 10`);
+      }
+    });
   }
-
 
   email.value = "";
   name.value = "";
   college.value = "";
   semester.value = "";
 });
-
